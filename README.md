@@ -9,5 +9,5 @@ Use IsOrdered in your code by applying it as an extension method to any IEnumera
             List<int> vector1 = new List<int> { -10, 9, 18, 170 };
             Console.WriteLine(vector1.IsOrdered()); // Writes "True"
 
-			int[] myArray = { -10, 90, 18, 170 };
+            int[] myArray = { -10, 90, 18, 170 };
             Console.WriteLine(myArray.IsOrdered()); // Writes "False"
