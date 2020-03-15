@@ -11,3 +11,10 @@ Use IsOrdered in your code by applying it as an extension method to any IEnumera
 
             int[] myArray = { -10, 90, 18, 170 };
             Console.WriteLine(myArray.IsOrdered()); // Writes "False"
+
+An overload is available that takes an IComparer as an argument. When using this overload, it is not necessary for the items to implement IComparable.
+
+            List<MyClass> test = new List<MyClass> { new MyClass { Name = "single" } };
+            bool isOrdered = test.IsOrdered(new MyComparer());
+
+You will find an example for MyClass and MyComparer inside the unit tests.

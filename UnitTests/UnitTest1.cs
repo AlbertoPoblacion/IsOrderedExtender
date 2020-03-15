@@ -1,12 +1,13 @@
 ﻿namespace UnitTests
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using ExtenderLibrary;
-    using System.Linq;
-    using System.Collections;
-    using System.Collections.Generic;
+
     [TestClass]
     public class UnitTest1
     {
@@ -30,6 +31,14 @@
         public void SortedList()
         {
             int[] test = new int[] { 1, 2, 3, 4, 5 };
+            bool isOrdered = test.IsOrdered();
+            Assert.IsTrue(isOrdered);
+        }
+
+        [TestMethod]
+        public void EqualElements()
+        {
+            int[] test = new int[] { 1, 1, 2, 2, 3, 3 };
             bool isOrdered = test.IsOrdered();
             Assert.IsTrue(isOrdered);
         }
